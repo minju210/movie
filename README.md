@@ -4,6 +4,9 @@
 ```bash
 # main
 $ pip install git+https://github.com/minju210/movie.git
+
+# branch
+$ pip install git+https://github.com/minju210/movie.git@<BRANCH_NAME>
 ```
 
 ### start dev
