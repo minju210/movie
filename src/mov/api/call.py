@@ -4,7 +4,7 @@ import pandas as pd
 
 def save2df(load_dt='20120101'):
     df = list2df(load_dt)
-    df['load_dt'] = '20120101'
+    df['load_dt'] = load_dt
     print(df.head(5))
     df.to_parquet('~/tmp/test_parquet', partition_cols=['load_dt'])
     return df
