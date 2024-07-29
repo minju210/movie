@@ -9,12 +9,12 @@ def save2df(load_dt='20120101'):
     df.to_parquet('~/tmp/test_parquet', partition_cols=['load_dt'])
     return df
 
-def list2df(load_dt='20120101'):
-    l = req2list(load_dt)
+def list2df():
+    l = req2list()
     df = pd.DataFrame(l)
     return df
 
-def req2list(load_dt='20120101') -> list:
+def req2list() -> list:
     _, data = req()
     l = data['boxOfficeResult']['dailyBoxOfficeList']
     return l
