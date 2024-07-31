@@ -15,7 +15,7 @@ def apply_type2df(load_dt="20120101", path="~/tmp/test_parquet"):
     
     return df
 
-def save2df(load_dt='20120101', url_param={}):
+def save2df(load_dt='20120101'):
     df = list2df(load_dt)
     df['load_dt'] = load_dt
     print(df.head(5))
@@ -49,8 +49,6 @@ def gen_url(dt="20120101", req_val = {"multiMovieYn": "N"}):
     base_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
     key = get_key()
     url = f"{base_url}?key={key}&targetDt={dt}"
-    for k, v in req_val.items():
-        #url = url + f"&multiMovieYn=N"
-        url = url + f"&{k}={v}"
+    url = url + "&multiMovieYn=N"
 
     return url
