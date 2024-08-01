@@ -53,4 +53,8 @@ def gen_url(dt="20120101", url_param={}):
         #url = url + f"&multiMovieYn=N"
         url = url + f"&{k}={v}"
 
+    print("*" * 50)
+    print(url)
+    print("*" * 50)
+
     return url
